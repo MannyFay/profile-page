@@ -40,6 +40,14 @@ function App() {
         </a>
         &nbsp;&nbsp;·&nbsp;&nbsp;
         <a
+          href="https://blog.mhfay.de/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Blog
+        </a>
+        &nbsp;&nbsp;·&nbsp;&nbsp;
+        <a
           href="https://github.com/MannyFay"
           target="_blank"
           rel="noopener noreferrer"
