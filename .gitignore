@@ -1,8 +1,12 @@
 #------------------------------------------------------------------------------
-#--- AI
+# .gitignore
+#------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------
+# AI
 
 .claude
-
 
 
 #------------------------------------------------------------------------------
@@ -37,9 +41,8 @@ test_inventory.yml
 vagrant/
 
 
-
 #------------------------------------------------------------------------------
-#--- Apple macOS
+# Apple macOS
 
 ._*
 .AppleDouble
@@ -56,8 +59,9 @@ vagrant/
 Thumbs.db
 .VolumeIcon.icns
 
+
 #------------------------------------------------------------------------------
-#--- Backup Files
+# Backup Files
 
 *.bak
 *.gho
@@ -65,8 +69,9 @@ Thumbs.db
 *.orig
 *.tmp
 
+
 #------------------------------------------------------------------------------
-#--- DotENV
+# DotENV
 
 .env
 .env*.local
@@ -78,8 +83,9 @@ Thumbs.db
 .env.production.local
 .env.test.local
 
+
 #------------------------------------------------------------------------------
-#--- Gradle
+# Gradle
 
 **/build/
 .gradle
@@ -88,13 +94,15 @@ gradle-app.setting
 !src/**/build/
 !gradle-wrapper.jar
 
+
 #------------------------------------------------------------------------------
-#--- GPG
+# GPG
 
 secring.*
 
+
 #------------------------------------------------------------------------------
-#--- JetBrains IDEs
+# JetBrains IDEs
 
 atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
@@ -110,8 +118,9 @@ fabric.properties
 .idea/replstate.xml
 out/
 
+
 #------------------------------------------------------------------------------
-#--- JavaScript
+# JavaScript
 
 .eslintcache
 pids
@@ -190,8 +199,9 @@ yarn-error.log
 .yarn/install-state.gz
 .yarn/unplugged
 
+
 #------------------------------------------------------------------------------
-#--- Linux
+# Linux
 
 *~
 .directory
@@ -199,8 +209,9 @@ yarn-error.log
 .nfs*
 .Trash-*
 
+
 #------------------------------------------------------------------------------
-#--- Microsoft Visual Studio Code
+# Microsoft Visual Studio Code
 
 *.code-workspace.vscode
 /.vscode/*
@@ -211,8 +222,9 @@ yarn-error.log
 .vscode-test
 .vscode
 
+
 #------------------------------------------------------------------------------
-#--- Microsoft Windows
+# Microsoft Windows
 
 *.cab
 [Dd]esktop.ini
@@ -228,8 +240,9 @@ $RECYCLE.BIN/
 Thumbs.db
 Thumbs.db:encryptable
 
+
 #------------------------------------------------------------------------------
-#--- PHP
+# PHP
 
 .buildpath
 .phpintel
@@ -262,33 +275,38 @@ Homestead.yaml
 /.phpunit.cache
 .phpunit.result.cache
 
+
 #-------------------------------------------------------------------------------
-#--- React router
+# React router
 
 .react-router/
 /build/
 
+
 #------------------------------------------------------------------------------
-#--- SSL
+# SSL
 
 #- Privacy Enhanced Mail
 *.pem
 
+
 #------------------------------------------------------------------------------
-#--- Sublime Text
+# Sublime Text
 
 GitHub.sublime-settings
 *.stTheme.cache
 *.tmlanguage.cache
 *.tmPreferences.cache
 
+
 #------------------------------------------------------------------------------
-#--- Vercel Cloud
+# Vercel Cloud
 
 .vercel
 
+
 #------------------------------------------------------------------------------
-# --- Vim / NeoVim
+# Vim / NeoVim
 
 #- Swap
 [._]*.s[a-v][a-z]
@@ -311,4 +329,10 @@ tags
 
 #- Persistent undo
 [._]*.un~
+
+
+#------------------------------------------------------------------------------
+# Vite
+
+.vite/
 
