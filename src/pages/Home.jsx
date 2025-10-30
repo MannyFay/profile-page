@@ -15,7 +15,7 @@ function Home() {
         />
       </div>
       <p className="mb-6 text-center">- raw page under construction -</p>
-      <p className="text-center">
+      <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 px-4">
         <a
           href="https://x.com/FayManny"
           target="_blank"
@@ -23,7 +23,7 @@ function Home() {
         >
           X
         </a>
-        &nbsp;&nbsp;·&nbsp;&nbsp;
+        <span className="text-gray-400">·</span>
         <a
           href="https://www.linkedin.com/in/manuel-hubertus-fay-0483a919a"
           target="_blank"
@@ -31,7 +31,7 @@ function Home() {
         >
           LinkedIn
         </a>
-        &nbsp;&nbsp;·&nbsp;&nbsp;
+        <span className="text-gray-400">·</span>
         <a
           href="https://www.xing.com/profile/ManuelHubertus_Fay"
           target="_blank"
@@ -39,7 +39,7 @@ function Home() {
         >
           XING
         </a>
-        &nbsp;&nbsp;·&nbsp;&nbsp;
+        <span className="text-gray-400">·</span>
         <a
           href="https://blog.mhfay.de/"
           target="_blank"
@@ -47,7 +47,7 @@ function Home() {
         >
           Blog
         </a>
-        &nbsp;&nbsp;·&nbsp;&nbsp;
+        <span className="text-gray-400">·</span>
         <a
           href="https://github.com/MannyFay"
           target="_blank"
@@ -55,7 +55,7 @@ function Home() {
         >
           GitHub
         </a>
-        &nbsp;&nbsp;·&nbsp;&nbsp;
+        <span className="text-gray-400">·</span>
         <a
           href="https://gitlab.com/MannyFay"
           target="_blank"
@@ -63,7 +63,7 @@ function Home() {
         >
           GitLab
         </a>
-        &nbsp;&nbsp;·&nbsp;&nbsp;
+        <span className="text-gray-400">·</span>
         <a
           href="https://www.instagram.com/_mannyfay/"
           target="_blank"
@@ -71,7 +71,7 @@ function Home() {
         >
           Instagram
         </a>
-        &nbsp;&nbsp;·&nbsp;&nbsp;
+        <span className="text-gray-400">·</span>
         <a
           href="https://discordapp.com/users/915290890111709234"
           target="_blank"
@@ -79,7 +79,7 @@ function Home() {
         >
           Discord
         </a>
-      </p>
+      </div>
     </>
   );
 }
