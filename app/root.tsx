@@ -11,6 +11,11 @@ import type { Route } from './+types/root';
 import './app.css';
 
 export const links: Route.LinksFunction = () => [
+  { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+  { rel: 'icon', href: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+  { rel: 'icon', href: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+  { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
+  { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#0c0a09' },
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
   {
     rel: 'preconnect',
@@ -19,7 +24,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
+    href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap',
   },
 ];
 
@@ -32,10 +37,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
           name="viewport"
           content="width=device-width, initial-scale=1"
         />
+        <meta
+          name="color-scheme"
+          content="dark"
+        />
+        <meta
+          name="theme-color"
+          content="#0c0a09"
+        />
+        <meta
+          name="author"
+          content="Manuel-Hubertus Fay"
+        />
+        <meta
+          name="keywords"
+          content="Manuel-Hubertus Fay, Web, Development, Software Developer"
+        />
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="flex min-h-screen flex-col items-center">
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -63,11 +84,11 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1>{message}</h1>
-      <p>{details}</p>
+    <main className="container mx-auto p-4 pt-16">
+      <h1 className="text-3xl font-semibold">{message}</h1>
+      <p className="mt-4">{details}</p>
       {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
+        <pre className="mt-4 w-full overflow-x-auto rounded-md bg-stone-200 p-4">
           <code>{stack}</code>
         </pre>
       )}

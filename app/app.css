@@ -1,15 +1,138 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-stone-50: #fafaf9;
+  --color-stone-100: #f5f5f4;
+  --color-stone-200: #e7e5e4;
+  --color-stone-300: #d6d3d1;
+  --color-stone-400: #a8a29e;
+  --color-stone-500: #78716c;
+  --color-stone-600: #57534e;
+  --color-stone-700: #44403c;
+  --color-stone-800: #292524;
+  --color-stone-900: #1c1917;
+  --color-stone-950: #0c0a09;
+}
+
+html {
+  font-family: var(--font-sans);
+  color-scheme: dark;
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-stone-900 text-stone-50 min-h-screen;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+::selection {
+  @apply bg-stone-50 text-stone-900;
+}
+
+/*---------------------------------------------------------------------------*/
+/* Hamburger menu                                                            */
+/*---------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------*/
+/* Opening sequence: */
+
+.hamburger-bar {
+  transform-box: fill-box;
+  transform-origin: center center;
+}
+
+/* Opening animations: */
+.hamburger-active .hamburger-bar-top {
+  animation: topBarToX 0.4s ease-in-out forwards;
+}
+
+.hamburger-active .hamburger-bar-middle {
+  animation: middleBarFade 0.2s ease-in-out forwards;
+}
+
+.hamburger-active .hamburger-bar-bottom {
+  animation: bottomBarToX 0.4s ease-in-out forwards;
+}
+
+@keyframes topBarToX {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(19px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(19px) rotate(45deg);
+  }
+}
+
+@keyframes middleBarFade {
+  0%, 30% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bottomBarToX {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-19px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-19px) rotate(-45deg);
+  }
+}
+
+/*---------------------------------------------------------------------------*/
+/* Closing (reverse) sequence: */
+
+.hamburger-closing .hamburger-bar-top {
+  animation: topBarFromX 0.4s ease-in-out forwards;
+}
+
+.hamburger-closing .hamburger-bar-middle {
+  animation: middleBarShow 0.4s ease-in-out forwards;
+}
+
+.hamburger-closing .hamburger-bar-bottom {
+  animation: bottomBarFromX 0.4s ease-in-out forwards;
+}
+
+@keyframes topBarFromX {
+  0% {
+    transform: translateY(19px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(19px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes middleBarShow {
+  0%, 50% {
+    opacity: 0;
+  }
+  70%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bottomBarFromX {
+  0% {
+    transform: translateY(-19px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-19px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
   }
 }
