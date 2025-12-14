@@ -42,7 +42,7 @@ export default function SiteNotice() {
           </address>
           <h2 className="mb-4 text-xl">Contact</h2>
           <p className="mb-6">
-            Telefon: +49 (0) 160 73913049
+            Telefon: +49 (0) 177 1447823
             <br />
             Telefax: +49 (0) 2217766292
             <br />
